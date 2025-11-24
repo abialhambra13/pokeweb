@@ -1,67 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokemon World - Bootstrap 5</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
 
-    <title>Pokemon Collection Website</title>
+    <style>
+      /* Hero Section */
+      #hero {
+        background: linear-gradient(90deg, #ffcb05, #ffffff);
+        padding: 80px 0;
+      }
+      #hero img {
+        width: 300px;
+      }
+      .pokemon-card img {
+        width: 140px;
+      }
+      footer {
+        background: #2a75bb;
+        color: white;
+        padding: 20px 0;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">PokeWEB</a>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">Pokemon World</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#navMenu"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-primary fw-bold" href="#hero">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Collection</a>
+              <a class="nav-link text-primary fw-bold" href="#pokemon"
+                >Collection</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link text-primary fw-bold" href="#fitur">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link text-primary fw-bold" href="#footer"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- HERO SECTION -->
+    <section id="hero" class="text-center text-lg-start">
+      <div class="container d-flex flex-column flex-lg-row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="fw-bold text-primary">Selamat Datang di Dunia Pokemon!</h1>
+          <p class="lead mt-3">
+            Tangkap, latih, dan bertarung bersama Pokémon favoritmu.
+          </p>
+          <a href="#pokemon" class="btn btn-primary btn-lg mt-3"
+            >Lihat Pokemon</a
+          >
+        </div>
+        <div class="col-lg-6 text-center">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+            alt="Pikachu"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <!-- POKEMON SECTION -->
+    <section id="pokemon" class="py-5 bg-light text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-4 text-primary">Pokemon Populer</h2>
+        <div class="row g-4 justify-content-center">
+          <!-- Bulbasaur -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card pokemon-card shadow-sm p-3">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                class="mx-auto d-block"
+              />
+              <h4 class="mt-3">Bulbasaur</h4>
+            </div>
+          </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+          <!-- Charmander -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card pokemon-card shadow-sm p-3">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                class="mx-auto d-block"
+              />
+              <h4 class="mt-3">Charmander</h4>
+            </div>
+          </div>
+
+          <!-- Squirtle -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card pokemon-card shadow-sm p-3">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+                class="mx-auto d-block"
+              />
+              <h4 class="mt-3">Squirtle</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+    <section id="fitur" class="py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold text-primary mb-4">Kenapa Pilih Kami?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-3 border rounded">
+              <h4>✔ Koleksi Lengkap</h4>
+              <p>Ribuan Pokémon dari berbagai generasi.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-3 border rounded">
+              <h4>✔ Info Detail</h4>
+              <p>Statistik lengkap, tipe, evolusi, dan banyak lagi.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-3 border rounded">
+              <h4>✔ Responsif</h4>
+              <p>Dapat dibuka dengan nyaman di HP dan laptop.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="text-center">
+      <p class="mb-0">© 2025 Pokemon World — Fan-made Landing Page</p>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
